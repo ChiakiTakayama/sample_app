@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'lists/new'
+  post 'lists' => 'lists#create' #2章、投稿機能を作ろうで
   get 'lists/index'
   get 'lists/show'
   get 'lists/edit'
