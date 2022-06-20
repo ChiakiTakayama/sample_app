@@ -9,6 +9,8 @@ class ListsController < ApplicationController
     redirect_to '/top'
   end
   def index
+    @lists = List.all
+    # 3章コントローラーにindexアクションを追加するで追記
   end
 
   def show

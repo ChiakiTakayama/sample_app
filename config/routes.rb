@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'lists/new'
-  post 'lists' => 'lists#create' #2章、投稿機能を作ろうで
-  get 'lists/index'
+  post 'lists' => 'lists#create' #2章、投稿機能を作ろうで追加
+  get 'lists' => 'lists#index' #3章Routingで書き換え
   get 'lists/show'
   get 'lists/edit'
   get '/top' => 'homes#top'
