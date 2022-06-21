@@ -3,10 +3,13 @@ class ListsController < ApplicationController
     @list = List.new
     # 2章投稿機能を作ろう
   end
-  def create#2章保存機能を追加するで追記（次のendまで）
-    list = List.new(list_params)
-    list.save
-    redirect_to list_path(list.id)#4章でredirect_toを変更するで書き換え
+  def create#8章バリデーションチェック（次のendまで）
+    @list = List.new(list_params)
+    if @list.save
+      redirect_to list_path(@list.id)
+    else
+      render :new
+    end  
   end
   def index
     @lists = List.all
