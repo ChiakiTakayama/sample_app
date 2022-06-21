@@ -8,8 +8,8 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list.id)
     else
-      render :new
-    end  
+      render :new#9章でいじったから元に戻ってるか不安な部分
+    end
   end
   def index
     @lists = List.all
@@ -30,9 +30,9 @@ class ListsController < ApplicationController
     redirect_to list_path(list.id)
   end
   def destroy#7章コントローラで追加
-    list = List.find(params[:id]) 
+    list = List.find(params[:id])
     list.destroy
-    redirect_to '/lists' 
+    redirect_to '/lists'
   end
 
   private#2章保存機能を追加するで追記（次のendまで）
