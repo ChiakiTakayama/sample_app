@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'lists/:id/edit' => 'lists#edit',as:'edit_list'#5章ルーティングで追記
   get '/top' => 'homes#top'
   patch 'lists/:id' => 'lists#update',as:'update_list'#5章更新機能を追加で追加
+ delete 'lists/:id' => 'lists#destroy', as: 'destroy_list'#7章削除機能作成の流れで追加
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
