@@ -29,6 +29,6 @@ class ListsController < ApplicationController
 
   private#2章保存機能を追加するで追記（次のendまで）
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body,:image)
   end
 end
