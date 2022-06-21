@@ -14,6 +14,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @list = List.find(params[:id])#4章shouアクションを作成するで追記
   end
 
   def edit
