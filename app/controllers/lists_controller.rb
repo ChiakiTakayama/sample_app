@@ -17,7 +17,14 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])#4章shouアクションを作成するで追記
   end
 
-  def edit
+  def edit# 5章で追記
+    @list = List.find(params[:id])
+  end
+
+  def update
+    list = List.find(params[:id])
+    list.update(list_params)
+    redirect_to list_path(list.id)
   end
 
   private#2章保存機能を追加するで追記（次のendまで）
