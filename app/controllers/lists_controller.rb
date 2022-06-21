@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   def create#2章保存機能を追加するで追記（次のendまで）
     list = List.new(list_params)
     list.save
-    redirect_to '/top'
+    redirect_to list_path(list.id)#4章でredirect_toを変更するで書き換え
   end
   def index
     @lists = List.all
